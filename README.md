@@ -31,8 +31,8 @@ Note: This is setup with smaller infrastructure for testing purposes.
 - ssl.tf: Contains the configurations for the SSL.
 - variables.tf: Defines variables used in the configuration.
 - test.txt: Contains extra notes and information.
-- security.tf: - Contains the configurations for Security Groups.
-- output.tf: - Contains information about the resources created.
+- security.tf: Contains the configurations for Security Groups.
+- output.tf: Contains information about the resources created.
 - terraform.log: Contains a log output. 
 
 ## Outputs
