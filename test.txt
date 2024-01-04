@@ -1,0 +1,39 @@
+#######################################
+main.tf (AWS Provider Configuration)
+
+#######################################
+ec2.tf (AWS EC2 Configuration)
+
+Resource blocks are set up to configure our ec2 instances. I have used an input variables file to allow us to set the number of instances created. In here I have also labels for billing purposes and statically set the AMI ID 
+
+#######################################
+rds.tf (RDS MySQL Configuration)
+
+1. Resource blocks are set up here to define an AWS RDS instance with the specified configuration, including custom parameters and associated security groups with MySQL compatibility and InnoDB buffer pool size. Also setup to allow backup, monitoring and high availability across multiple zones
+
+2. I decided to use AWS's Multi-AZ deployment to provide high availability without the need for managing a second RDS instance
+
+3. Amazon Aurora was another option here following some research but I decided to stick with MySQL based on prior experience 
+
+#######################################
+variables.tf (inout Variables Configuration)
+
+Contains input variables which can be used to adjust the number of EC2 instances required 
+
+#######################################
+security.tf (Security Group Configuration)
+
+Contains security group configuration and other relevant security group rules to act as a component for controlling inbound and outbound traffic
+
+#######################################
+network.tf (VPC and Subnets Configuration) 
+
+#######################################
+ssl.tf (SSL Encryption Configuration)
+
+Contains configurations to allow for SSL encryption for RDS instance(s) Note: Not configured
+
+#######################################
+outputs.tf (Resource Information)		
+
+Contains information about the resources created for sharing certain values with other parts of the infrastructure. Note: Not configured
