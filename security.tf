@@ -3,7 +3,7 @@
 resource "aws_security_group" "rds_sg" {
   name        = "rds-security-group"
   description = "Security group for RDS instance"
-  vpc_id = aws_vpc.tf_vpc.id
+  vpc_id      = aws_vpc.tf_vpc.id
 }
 
 resource "aws_security_group" "ec2_sg" {

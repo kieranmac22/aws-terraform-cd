@@ -19,9 +19,9 @@ resource "aws_db_instance" "tf_rds_instance" {
   engine            = "mysql"
   engine_version    = "5.7"
   instance_class    = "db.t2.micro"
-  username          = "admin" # change for setup based on user
+  username          = "admin"    # change for setup based on user
   password          = "password" # change for setup 
-  multi_az          = true # Enable Multi-AZ deployment for high availability
+  multi_az          = true       # Enable Multi-AZ deployment for high availability
   # monitoring_interval = 10  # Monitoring interval in seconds
   # monitoring_role_arn = "arn:aws:iam::123456789012:role/YourMonitoringRole"
   tags = {

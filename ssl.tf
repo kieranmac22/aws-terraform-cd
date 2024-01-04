@@ -1,7 +1,7 @@
 # SSL Encryption Configuration
 
 resource "aws_db_option_group" "rds_option_group" {
-   name = "rds-option-group"
+  name = "rds-option-group"
 
   option {
     option_name = "MYSQL_SSL"
